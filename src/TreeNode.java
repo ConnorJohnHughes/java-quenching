@@ -2,11 +2,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TreeNode<T> {
-    T data;
-    List<TreeNode<T>> children;
+    public T data;
+    public List<TreeNode<T>> children;
 
     public TreeNode(T data) {
+      this(data, new ArrayList<>());
+    }
+
+    public TreeNode(T data, List<TreeNode<T>> children) {
       this.data = data;
-      children = new ArrayList<>();
+      this.children = new ArrayList<>(children);
     }
 }
